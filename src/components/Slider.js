@@ -1,17 +1,12 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import TabListMenu from "./TabList";
-import PCBuilder from "./PCBuilder";
 
 const Slider = () => {
   return (
-    <Flex alignItems={'center'} justifyContent={'space-around'} p={4}>
+    <Flex alignItems={"center"} justifyContent={"space-around"} p={4}>
       <Box>
-        <PCBuilder />
+        <TabListMenu />
       </Box>
-      <Box>
-      <TabListMenu />
-      </Box>
-      
     </Flex>
   );
 };

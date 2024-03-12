@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ComponentImage from './Cimage'; // Asegúrate de que la ruta de importación sea correcta
+import { Button } from '@chakra-ui/react';
 
 const PCBuilder = () => {
   const [selectedComponents, setSelectedComponents] = useState([]);
@@ -14,9 +15,9 @@ const PCBuilder = () => {
       <h2>Construye tu PC Gamer</h2>
       <div>
         {/* Botones de ejemplo para seleccionar componentes */}
-        <button onClick={() => addComponent('cpu')}>Agregar CPU</button>
-        <button onClick={() => addComponent('gpu')}>Agregar GPU</button>
-        <button onClick={() => addComponent('ram')}>Agregar RAM</button>
+        <Button onClick={() => addComponent('cpu')}>Agregar CPU</Button>
+        <Button onClick={() => addComponent('gpu')}>Agregar GPU</Button>
+        <Button onClick={() => addComponent('ram')}>Agregar RAM</Button>
         {/* Añadir más botones según sea necesario */}
       </div>
       <div>

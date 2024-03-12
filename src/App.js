@@ -1,14 +1,15 @@
-import { Box, ChakraProvider } from "@chakra-ui/react";
+
+import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Slider from "./components/Slider";
+import Header from "./components/Header";
 
 function App() {
   return (
     <ChakraProvider>
       <Navbar />
-      <Slider />
+      <Header />
     </ChakraProvider>
   );
 }

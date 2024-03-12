@@ -3,66 +3,35 @@ import {
   Flex,
   Image,
   HStack,
-  Menu,
-  MenuButton,
-  IconButton,
-  MenuList,
-  MenuItem,
+  Input,
 } from "@chakra-ui/react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
-import {
-  HamburgerIcon,
-  AddIcon,
-  ExternalLinkIcon,
-  RepeatIcon,
-  EditIcon,
-} from "@chakra-ui/icons";
+
+
+import SpinningTextAroundImage from "./Spinning/SpinningText";
+import Img from "./assets/kb.png";
 
 const Navbar = () => {
   return (
     <Flex
-      h={"80px"}
+      h={"100px"}
       bgColor={"#21201E"}
       color={"white"}
       justifyContent={"space-around"}
       alignItems="center"
     >
+
+
       <Box>
-        <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label="Options"
-            icon={<HamburgerIcon />}
-            variant="outline"
-          />
-          <MenuList>
-            <MenuItem icon={<AddIcon />} command="⌘T">
-              New Tab
-            </MenuItem>
-            <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-              New Window
-            </MenuItem>
-            <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-              Open Closed Tab
-            </MenuItem>
-            <MenuItem icon={<EditIcon />} command="⌘O">
-              Open File...
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      </Box>
-      <Box>
-        <Image
-          w={"80px"}
-          src={
-            "https://img.freepik.com/premium-vector/scary-skull-gaming-logo-vector-template_824296-5.jpg"
-          }
-        />
+        <SpinningTextAroundImage text={"PC - GAMING - BUILDER "}>
+          <Image src={Img}></Image>
+        </SpinningTextAroundImage>
       </Box>
       <Box>
         <HStack>
           <FaGithub />
           <FaInstagram />
+          <Input ml={3} mr={3} size={'sm'} placeholder='Basic usage' />
         </HStack>
       </Box>
     </Flex>
